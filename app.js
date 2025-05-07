@@ -4,12 +4,7 @@ function speakText() {
 
 }
 
-document.getElementById("speakBtn").addEventListener("click", () => {
-  const text = document.getElementById("text");
-  text.classList.remove("hide");
-  text.classList.add("show");
-  speakText();
-});
+
 
 
 // Speaks the utterance using the browser's speech synthesis API.
@@ -23,4 +18,12 @@ recognition.onresult = (e) => {
     let displayText = document.getElementById("text");
     displayText.innerHTML = transcript;
 };
-recognition.start();
+
+document.getElementById("speakBtn").addEventListener("click", () => {
+  const text = document.getElementById("heading");
+  text.classList.remove("hide");
+  text.classList.add("show");
+  speakText();
+  recognition.start();
+});
+
