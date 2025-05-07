@@ -10,10 +10,33 @@
             color: blue;
             font-size: 2em;
         }
+
+        #speakBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+            visibility: hidden;
+        }
+
+        .show {
+            display: block;
+            visibility: visible;
+        }
     </style>
 </head>
 <body>
-    <h1 class="heading">Say somthing here...</h1>
+    <button id="speakBtn" >Start</button>
+    <h1 class="heading hide">Say somthing here...</h1>
     <h1 id="text" style="color: red;"></h1>
     <script src="app.js"></script>
 </body>

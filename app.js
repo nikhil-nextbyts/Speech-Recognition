@@ -1,7 +1,17 @@
-const utterance = new SpeechSynthesisUtterance("Hello Nikhil!");
-// Creates a new speech synthesis utterance with the specified text.
+function speakText() {
+  const utterance = new SpeechSynthesisUtterance("Hello Nikhil!");
+  speechSynthesis.speak(utterance);
 
-speechSynthesis.speak(utterance);
+}
+
+document.getElementById("speakBtn").addEventListener("click", () => {
+  const text = document.getElementById("text");
+  text.classList.remove("hide");
+  text.classList.add("show");
+  speakText();
+});
+
+
 // Speaks the utterance using the browser's speech synthesis API.
 const recognition = new (window.SpeechRecognition ||
   window.webkitSpeechRecognition)();
