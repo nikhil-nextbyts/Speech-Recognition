@@ -8,7 +8,9 @@ const recognition = new (window.SpeechRecognition ||
 recognition.onresult = (e) => {
   const transcript = e.results[0][0].transcript;
   console.log("You said:", transcript);
-  let displayText = document.getElementById("text");
-  displayText.innerHTML = transcript;
+  
+    // Display the transcript in the HTML element with id "text"
+    let displayText = document.getElementById("text");
+    displayText.innerHTML = transcript;
 };
 recognition.start();
